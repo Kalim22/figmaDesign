@@ -7,7 +7,6 @@
 
 .contact__container {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,11 +19,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-right: 2px solid var(--gray);
 }
 
 .contact__form p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
+    margin-bottom: 0.6rem;
 }
 
 .contact__form form {
@@ -176,12 +177,10 @@
 
 .additional__details {
     width: 20%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-left: 1px solid var(--gray);
 }
 
 .additional__details .phone__detail {
@@ -191,12 +190,8 @@
 .additional__details .phone__detail,
 .additional__details .email__detail {
     width: 100%;
-    height: calc(100% / 2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+    text-align: center;
+    padding: 6rem 0;
 }
 
 .additional__details .phone__detail p:first-of-type,
@@ -204,6 +199,7 @@
     color: var(--placeholdercolor);
     font-size: 14px;
     font-weight: 500;
+    margin: 10px 0;
 }
 
 .additional__details .phone__detail p:last-child,
@@ -227,9 +223,26 @@
     padding: 8px 8px;
     box-sizing: border-box;
 }
+.close__section{
+    width: 90%;
+    border-bottom: 2px solid var(--gray);
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1rem;
+    display: none;
+
+}
+.close__section .plus__icon{
+    transform: rotate(45deg);
+    font-weight: 100;
+}
 
 /* media queries */
 @media (max-width: 800px) {
+    .close__section{
+        display: flex
+    }
     .contact__container {
         flex-direction: column;
         height: auto !important;
@@ -257,7 +270,17 @@
     }
 
     .additional__details {
-        height: auto;
+        border-top: 2px solid var(--gray);
+    }
+    .additional__details .phone__detail, .additional__details .email__detail{
+        padding: 3rem 0;
+    }
+    .arrowRight{
+        width: 31px;
+        height: 25px;
+    }
+    .upload__input__container__before{
+        padding: 1rem 1rem;
     }
 }
 

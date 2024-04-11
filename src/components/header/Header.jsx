@@ -16,8 +16,8 @@ function Header({ setShowSearch }) {
           <li>Private Sale</li>
           <li>Log In</li>
           <li>IT <MdOutlineKeyboardArrowDown /></li>
-          <li onClick={() => setShowSearch(true)}><MdOutlineSearch /></li>
-          <li><GiHamburgerMenu /></li>
+          <li onClick={() => setShowSearch(true)}><MdOutlineSearch size={30}/></li>
+          <li><GiHamburgerMenu size={30}/></li>
         </ul>
       </nav>
     </header>

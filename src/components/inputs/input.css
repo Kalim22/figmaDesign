@@ -21,7 +21,7 @@
     border: none;
     outline: none;
     background: none;
-    border-bottom: 2px solid var(--gray);
+    border-bottom: 3px solid var(--gray);
     font-size: 120px;
     padding: 10px 10px;
     color: var(--black);
@@ -32,10 +32,10 @@
 /* @media queries */
 @media (max-width: 700px){
     .input__field{
-        font-size: 50px;
+        font-size: 30px;
     }
     .input__field::placeholder{
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 /* @media queries */

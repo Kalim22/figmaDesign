@@ -33,3 +33,26 @@
     font-weight: 500;
     text-align: center;
 }
+.close__section{
+    width: 90%;
+    border-bottom: 2px solid var(--gray);
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 0.7rem;
+    margin-top: 1rem;
+    display: none;
+}
+.close__section .plus__icon{
+    transform: rotate(45deg);
+    font-weight: 100;
+}
+/* media queries */
+@media (max-width: 805px) {
+    .close__section{
+        display: flex
+    }
+    .contact__section {
+        flex-direction: column;
+    }
+}
+/* media queries */

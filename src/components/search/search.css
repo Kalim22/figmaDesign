@@ -15,6 +15,8 @@
     background-color: var(--white);
     padding: 11rem 0;
     z-index: 2;
+    overflow: hidden;
+    height: 100vh;
 }
 .close{
     position: absolute;
@@ -30,7 +32,7 @@
 
 
 .hints__list__section{
-    width: 80%;
+    width: 90%;
     margin: 1rem 0;
     display: flex;
     justify-content: flex-start;
@@ -40,25 +42,28 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
     cursor: pointer;
+    overflow: hidden;
 }
 .hints__list .clicked__list{
     list-style: none;
     background-color: var(--black);
     color: var(--white);
     padding: 10px 15px;
-    border-radius: 35px;
+    border-radius: 50px;
+    border: 1px solid var(--black);
 }
 .hints__list .unclicked__list{
     list-style: none;
     background-color: var(--white);
     color: var(--black);
     padding: 10px 15px;
-    border-radius: 13px;
+    border-radius: 50px;
+    border: 1px solid var(--black);
 }
 .suggestion__container{
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -68,7 +73,7 @@
 .suggestion__container p{
     font-size: 1rem;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 .suggestion__list__container{
     width: 100%;
@@ -101,6 +106,13 @@
 @media (max-width: 700px){
     .suggestion__list__container p{
         font-size: 2.1rem;
+    }
+    .hints__list .clicked__list, .hints__list .unclicked__list{
+        padding: 10px 11px;
+        font-size: 14px;
+    }
+    .hints__list{
+        gap: 7px;
     }
 }
 /* media queries */

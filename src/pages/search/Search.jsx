@@ -12,22 +12,29 @@ function Search({ setShowSearch, setValue, value }) {
         'Until',
         'Clocks',
         'Jewels',
-        'Desgin'
+        'Design'
     ])
-    const [suggestion, setSuggestion] = useState([])
-    const [currentIndex, setCurrentIndex] = useState(1)
+    const [suggestion, setSuggestion] = useState(['Salvador Dalì', 'Andy Warhol', 'Gennaro Guttuso'])
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     const handleClick = id => {
         return setCurrentIndex(id)
     }
 
-    useEffect(() => {
-        if (value !== '') {
-            setTimeout(() => {
-                return setSuggestion(['Salvador Dalì', 'Andy Warhol', 'Gennaro Guttuso'])
-            }, 1300)
+    const handleResize = () => {
+        console.log(window.innerWidth)
+        if(window.innerWidth < 600){
+            return setCurrentIndex(1)
         }
-    }, [value])
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
 
     return (
         <div className='search__container'>
@@ -37,7 +44,7 @@ function Search({ setShowSearch, setValue, value }) {
             }} />
             <Input
                 className="input__field"
-                width={'80%'}
+                width={'90%'}
                 onChange={e => setValue(e.target.value)}
                 value={value}
                 placeholder={'Search your keywords'}

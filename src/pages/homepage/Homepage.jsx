@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import './homepage.css'
+import React, { useState } from 'react'
 import { resultList } from '../../assets/constants/constants'
 import ResultCard from '../../components/cards/ResultCard'
 import Header from '../../components/header/Header'
 import Search from '../search/Search'
+import './homepage.css'
 
 function Homepage() {
 

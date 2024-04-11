@@ -6,6 +6,7 @@ import Sidemenu from '../../components/sidemenu/Sidemenu';
 import { useNavigate } from 'react-router-dom'
 import { FiAtSign } from "react-icons/fi";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { GoPlus } from "react-icons/go";
 
 import './contact.css'
 
@@ -64,6 +65,9 @@ function Contact() {
         <section className='contact__container'>
             <Sidemenu />
             <div className='contact__form'>
+                <div className='close__section'>
+                    <GoPlus  size={30} className='plus__icon'/>
+                </div>
                 <p>Contact Us</p>
                 <form className='form' onSubmit={handleSubmit}>
                     <div className='input__container'>
@@ -130,8 +134,8 @@ function Contact() {
                             {
                                 uploadImagesrc && uploadImagesrc?.map((ele, idx) => {
                                     return (
-                                        <div className='image__box' onClick={() => handleDelete(ele)}>
-                                            <img key={idx} src={ele} />
+                                        <div key={idx} className='image__box' onClick={() => handleDelete(ele)}>
+                                            <img src={ele} />
                                         </div>
                                     )
                                 })
@@ -143,7 +147,7 @@ function Contact() {
                                     size={20}
                                     className='arrowRight'
                                     onClick={() => handleScroll(30)} />
-                                : null
+                                : null 
                         }
                     </div>
                     <Button
