@@ -1,0 +1,16 @@
+:root{
+    --black: #000;
+    --white: #fff
+}
+button{
+    background: none;
+    outline: none;
+    border: none;
+    background-color: var(--black);
+    border-radius: 50px;
+    color: var(--white);
+    text-align: center;
+    padding: 12px 0;
+    margin: 2rem 0;
+    cursor: pointer;
+}

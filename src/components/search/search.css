@@ -1,0 +1,106 @@
+:root {
+    --gray: #d9d9d9;
+    --black: #000;
+    --white: #fff;
+}
+.search__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    padding: 11rem 0;
+    z-index: 2;
+}
+.close{
+    position: absolute;
+    right: 10rem;
+    top: 2rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.close:hover{
+    transform: rotate(315deg);
+}
+
+
+.hints__list__section{
+    width: 80%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.hints__list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.hints__list .clicked__list{
+    list-style: none;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 35px;
+}
+.hints__list .unclicked__list{
+    list-style: none;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 10px 15px;
+    border-radius: 13px;
+}
+.suggestion__container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 3rem 0;
+}
+.suggestion__container p{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.suggestion__list__container{
+    width: 100%;
+}
+.suggestion__list__container p{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--gray);
+    border-bottom: 1px solid var(--gray);
+    padding: 10px 0;
+    transition: 0.3s;
+}
+.suggestion__list__container p:hover{
+    cursor: pointer;
+    color: var(--black);
+}
+/* media queries */
+@media (max-width: 700px){
+    .hints__list{
+        gap: 0px;
+    }
+    .hints__list li:first-child{
+        display: none;
+    }
+    .hints__list__section{
+        width: 90%;
+    }
+}
+/* media queries */
+@media (max-width: 700px){
+    .suggestion__list__container p{
+        font-size: 2.1rem;
+    }
+}
+/* media queries */
